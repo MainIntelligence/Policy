@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(Policy)
+
+include(GNUInstallDirs)
+
+install(DIRECTORY Policy/ 
+	DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
+	FILES_MATCHING PATTERN "*.h"
+)
+
+install(DIRECTORY Common/ 
+	DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/Common
+	FILES_MATCHING PATTERN "*.h"
+)
